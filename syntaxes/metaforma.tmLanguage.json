@@ -1,0 +1,100 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "MetaForma",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.metaforma",
+          "begin": "@@",
+          "end": "\n"
+        },
+        {
+          "name": "comment.block.metaforma",
+          "begin": "@\\[",
+          "end": "@\\]"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.metaforma",
+          "match": "(?<!@)\\b(break|case|catch|do|else|finally|for|if|loop|next|return|switch|try|unless|while|yield)\\b"
+        },
+        {
+          "name": "storage.type.metaforma",
+          "match": "(?<!@)\\b(function|interface|let|record|struct)\\b"
+        },
+        {
+          "name": "keyword.other.preprocessor.metaforma",
+          "match": "@#[0-9a-zA-Z_]+"
+        },
+        {
+          "name": "constant.language.metaforma",
+          "match": "(?<!@)\\b(false|nil|true)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.metaforma",
+          "match": "[0-9][0-9a-zA-Z_.]*"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.metaforma",
+          "match": "(?<![`~!@#$%^&*_=+|;:,<.>/?-])(&|=|:|!|&&|&&=|\\|\\||\\|\\|=|\\/|\\/=|==|>|>=|<|<=|-|-=|--|%|%=|\\*|\\*=|~|!=|\\||\\|=|\\+|\\+=|\\+\\+|\\?|\\^|\\^=)(?![`~!@#$%^&*_=+|;:,<.>/?-])"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.metaforma",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.metaforma",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.metaforma",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.metaforma",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "scopeName": "source.metaforma"
+}

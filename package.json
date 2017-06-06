@@ -1,0 +1,35 @@
+{
+    "name": "vscode-forma",
+    "displayName": "vscode-forma",
+    "description": "Forma language support for VS Code.",
+    "version": "0.0.1",
+    "publisher": "rk1024",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "forma",
+            "aliases": ["Forma", "forma"],
+            "extensions": [".fma"],
+            "configuration": "./language-configuration.json"
+        },{
+            "id": "metaforma",
+            "aliases": ["MetaForma", "Metaforma", "metaforma"],
+            "extensions": [],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "forma",
+            "scopeName": "source.forma",
+            "path": "./syntaxes/forma.tmLanguage.json"
+        },{
+            "language": "metaforma",
+            "scopeName": "source.metaforma",
+            "path": "./syntaxes/metaforma.tmLanguage.json"
+        }]
+    }
+}
