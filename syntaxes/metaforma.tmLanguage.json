@@ -41,7 +41,30 @@
         },
         {
           "name": "storage.type.metaforma",
-          "match": "(?<!@)\\b(function|interface|let|record|struct)\\b"
+          "match": "(?<!@)\\b(interface|let|struct)\\b"
+        },
+        {
+          "match": "(?<!@)\\b(function|record)\\s*\\((.*)\\)",
+          "captures": {
+            "1": {
+              "name": "storage.type.function.metaforma"
+            },
+            "2": {
+              "patterns": [
+                {
+                  "match": "((?:@|\\b)[a-zA-Z_][a-zA-Z0-9_]*)\\s+((?:@|\\b)[a-zA-Z_][a-zA-Z0-9_]*)",
+                  "captures": {
+                    "1": {
+                      "name": "storage.type.metaforma"
+                    },
+                    "2": {
+                      "name": "variable.parameter.metaforma"
+                    }
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "name": "keyword.other.preprocessor.metaforma",
@@ -50,6 +73,10 @@
         {
           "name": "constant.language.metaforma",
           "match": "(?<!@)\\b(false|nil|true)\\b"
+        },
+        {
+          "name": "variable.other.metaforma",
+          "match": "(?:@|\\b)[a-zA-Z_][a-zA-Z0-9_]*\\b"
         }
       ]
     },

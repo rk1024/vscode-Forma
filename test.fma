@@ -41,7 +41,7 @@ using System;
 
   while (x) ;
 
-  while (let x = 15; if (12 <= x) y; else z;) ;
+  while (let x = 15; if (12 <= x) y; else z) ;
 
   do ; while (y);
 
@@ -83,6 +83,12 @@ using System;
 
   let stuff = (pi + 1) / 2;
   (1 + 2 * 3).test()["hi"].x["some", stuff()](1, 2);
+
+  let main = function(int argc, string[] argv) {
+    print("Hi there!"); @@ Make sure this stuff works.
+
+    return 0;
+  }
 @}
 
 @#pragma warning disable 3200
