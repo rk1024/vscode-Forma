@@ -37,7 +37,7 @@
       "patterns": [
         {
           "name": "keyword.control.metaforma",
-          "match": "(?<!@)\\b(break|case|catch|do|else|finally|for|if|loop|next|return|switch|try|unless|while|yield)\\b"
+          "match": "(?<!@)\\b(break|case|catch|default|do|else|finally|for|if|loop|next|return|switch|try|unless|while|yield)\\b"
         },
         {
           "name": "storage.type.metaforma",

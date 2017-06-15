@@ -6,6 +6,15 @@ using System;
   "
 @}
 
+@!c{
+  int main() {
+    int x = 1;
+    switch (5) {
+      case 1:
+    }
+  }
+@}
+
 @!meta{
   let @if = function(`({cond}) {then} else {else}`) {
     1 + 2;
@@ -69,6 +78,18 @@ using System;
 
   {
     hi();
+  }
+
+  let MyRecord = record(int a, char b);
+
+  switch (3) {
+    case 7:
+      break;
+    case MyRecord(int a, char b):
+      break;
+
+    default:
+      break;
   }
 
   let awesome = if (true) {
