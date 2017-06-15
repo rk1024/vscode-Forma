@@ -81,6 +81,8 @@ using System;
 
   let pi = 3.14159;
 
+  let num = .3;
+
   let stuff = (pi + 1) / 2;
   (1 + 2 * 3).test()["hi"].x["some", stuff()](1, 2);
 
