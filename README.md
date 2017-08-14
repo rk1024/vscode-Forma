@@ -1,6 +1,6 @@
 # vscode-forma README
 
-This extension includes syntax highlighting and basic language support for Forma and MetaForma.
+This extension includes syntax highlighting and basic language support for Forma and Præforma.
 
 <!--## Features
 

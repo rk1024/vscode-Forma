@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "MetaForma",
+  "name": "Præforma",
   "patterns": [
     {
       "include": "#comments"
@@ -22,12 +22,12 @@
     "comments": {
       "patterns": [
         {
-          "name": "comment.line.metaforma",
+          "name": "comment.line.praeforma",
           "begin": "@@",
           "end": "\n"
         },
         {
-          "name": "comment.block.metaforma",
+          "name": "comment.block.praeforma",
           "begin": "@\\[",
           "end": "@\\]"
         }
@@ -36,18 +36,18 @@
     "keywords": {
       "patterns": [
         {
-          "name": "keyword.control.metaforma",
+          "name": "keyword.control.praeforma",
           "match": "(?<!@)\\b(break|case|catch|default|do|else|finally|for|if|loop|next|return|switch|try|unless|while|yield)\\b"
         },
         {
-          "name": "storage.type.metaforma",
+          "name": "storage.type.praeforma",
           "match": "(?<!@)\\b(interface|let|struct)\\b"
         },
         {
           "match": "(?<!@)\\b(function|record)\\s*\\((.*)\\)",
           "captures": {
             "1": {
-              "name": "storage.type.function.metaforma"
+              "name": "storage.type.function.praeforma"
             },
             "2": {
               "patterns": [
@@ -55,10 +55,10 @@
                   "match": "((?:@|\\b)[a-zA-Z_][a-zA-Z0-9_]*)\\s+((?:@|\\b)[a-zA-Z_][a-zA-Z0-9_]*)",
                   "captures": {
                     "1": {
-                      "name": "storage.type.metaforma"
+                      "name": "storage.type.praeforma"
                     },
                     "2": {
-                      "name": "variable.parameter.metaforma"
+                      "name": "variable.parameter.praeforma"
                     }
                   }
                 }
@@ -67,15 +67,15 @@
           }
         },
         {
-          "name": "keyword.other.preprocessor.metaforma",
+          "name": "keyword.other.preprocessor.praeforma",
           "match": "@#[0-9a-zA-Z_]+"
         },
         {
-          "name": "constant.language.metaforma",
+          "name": "constant.language.praeforma",
           "match": "(?<!@)\\b(false|nil|true)\\b"
         },
         {
-          "name": "variable.other.metaforma",
+          "name": "variable.other.praeforma",
           "match": "(?:@|\\b)[a-zA-Z_][a-zA-Z0-9_]*\\b"
         }
       ]
@@ -83,7 +83,7 @@
     "numbers": {
       "patterns": [
         {
-          "name": "constant.numeric.metaforma",
+          "name": "constant.numeric.praeforma",
           "match": "\\.?[0-9][0-9a-zA-Z_.]*"
         }
       ]
@@ -91,7 +91,7 @@
     "operators": {
       "patterns": [
         {
-          "name": "keyword.operator.metaforma",
+          "name": "keyword.operator.praeforma",
           "match": "(?<![`~!@#$%^&*_=+|;:,<.>/?-])(&|=|:|!|&&|&&=|\\|\\||\\|\\|=|\\/|\\/=|==|>|>=|<|<=|-|-=|--|%|%=|\\*|\\*=|~|!=|\\||\\|=|\\+|\\+=|\\+\\+|\\?|\\^|\\^=)(?![`~!@#$%^&*_=+|;:,<.>/?-])"
         }
       ]
@@ -99,23 +99,23 @@
     "strings": {
       "patterns": [
         {
-          "name": "string.quoted.double.metaforma",
+          "name": "string.quoted.double.praeforma",
           "begin": "\"",
           "end": "\"",
           "patterns": [
             {
-              "name": "constant.character.escape.metaforma",
+              "name": "constant.character.escape.praeforma",
               "match": "\\\\."
             }
           ]
         },
         {
-          "name": "string.quoted.single.metaforma",
+          "name": "string.quoted.single.praeforma",
           "begin": "'",
           "end": "'",
           "patterns": [
             {
-              "name": "constant.character.escape.metaforma",
+              "name": "constant.character.escape.praeforma",
               "match": "\\\\."
             }
           ]
@@ -123,5 +123,5 @@
       ]
     }
   },
-  "scopeName": "source.metaforma"
+  "scopeName": "source.praeforma"
 }

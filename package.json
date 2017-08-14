@@ -17,8 +17,8 @@
             "extensions": [".fma"],
             "configuration": "./language-configuration.json"
         },{
-            "id": "metaforma",
-            "aliases": ["MetaForma", "Metaforma", "metaforma"],
+            "id": "praeforma",
+            "aliases": ["Præforma", "præforma", "praeforma"],
             "extensions": [],
             "configuration": "./language-configuration.json"
         }],
@@ -27,9 +27,9 @@
             "scopeName": "source.forma",
             "path": "./syntaxes/forma.tmLanguage.json"
         },{
-            "language": "metaforma",
-            "scopeName": "source.metaforma",
-            "path": "./syntaxes/metaforma.tmLanguage.json"
+            "language": "praeforma",
+            "scopeName": "source.praeforma",
+            "path": "./syntaxes/praeforma.tmLanguage.json"
         }]
     }
 }
