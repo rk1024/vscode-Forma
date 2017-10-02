@@ -44,7 +44,7 @@
         },
         {
           "name": "storage.type.praeforma",
-          "match": "(?<!@)\\b(interface|let|struct|var|void)\\b"
+          "match": "(?<!@)\\b(interface|let|struct|var|variant|void)\\b"
         },
         {
           "name": "constant.language.praeforma",
