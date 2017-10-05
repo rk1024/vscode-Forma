@@ -25,6 +25,11 @@
     "comments": {
       "patterns": [
         {
+          "name": "comment.line.number-sign.shell.praeforma",
+          "begin": "\\A#!",
+          "end": "\n"
+        },
+        {
           "name": "comment.line.forma",
           "begin": "@@",
           "end": "\n"
